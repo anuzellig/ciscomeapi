@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>API Documentation &#8212; Unofficial Cisco Mobility Express Python API 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="History" href="history.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ciscomeapi.ciscomeapi">
+<span id="api-documentation"></span><h1>API Documentation<a class="headerlink" href="#module-ciscomeapi.ciscomeapi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ciscomeapi">
+<h2>ciscomeapi<a class="headerlink" href="#ciscomeapi" title="Permalink to this headline">¶</a></h2>
+<p>The main Cisco Mobility Express API module</p>
+<dl class="function">
+<dt id="ciscomeapi.ciscomeapi.print_table">
+<code class="sig-prename descclassname">ciscomeapi.ciscomeapi.</code><code class="sig-name descname">print_table</code><span class="sig-paren">(</span><em class="sig-param">my_dict: dict</em>, <em class="sig-param">col_list: list = None</em><span class="sig-paren">)</span><a class="headerlink" href="#ciscomeapi.ciscomeapi.print_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pretty print a list of dictionaries as a dynamically sized table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>my_dict</strong> (<em>dict</em>) – The dictionary or list of dictionaries to print</p></li>
+<li><p><strong>col_list</strong> (<em>list</em>) – The list of columns to include that correspond to keys in the dictionaryies</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<dl class="class">
+<dt id="ciscomeapi.ciscomeapi.CiscoME">
+<em class="property">class </em><code class="sig-prename descclassname">ciscomeapi.ciscomeapi.</code><code class="sig-name descname">CiscoME</code><span class="sig-paren">(</span><em class="sig-param">host: str</em>, <em class="sig-param">username: str</em>, <em class="sig-param">password: str</em>, <em class="sig-param">ssl: bool = True</em>, <em class="sig-param">verify: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">host: str</em>, <em class="sig-param">username: str</em>, <em class="sig-param">password: str</em>, <em class="sig-param">ssl: bool = True</em>, <em class="sig-param">verify: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to the Mobility Express controller</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>host</strong> (<em>str</em>) – The hostname or IP address of the Mobility Express Controller</p></li>
+<li><p><strong>username</strong> (<em>str</em>) – Mobility Express administrator username</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – Mobility Express administrator username</p></li>
+<li><p><strong>ssl</strong> (<em>bool</em>) – If True use https, otherwise http (default True)</p></li>
+<li><p><strong>verify</strong> (<em>bool</em>) – If True, verify the SSL certificate (default False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CiscoME object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.aps">
+<code class="sig-name descname">aps</code><span class="sig-paren">(</span><em class="sig-param">take: int = 1000</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.aps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of access points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>take</strong> (<em>int</em>) – The maximum number of items to return</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The access point data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.client_table">
+<code class="sig-name descname">client_table</code><span class="sig-paren">(</span><em class="sig-param">take: int = 1000</em>, <em class="sig-param">columns: int = 524287</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.client_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the table of client data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>take</strong> (<em>int</em>) – The maximum number of items to return</p></li>
+<li><p><strong>columns</strong> (<em>int</em>) – The binary value determines which columns are included in the output (19 bits). By default returns all columns.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The client data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the session to the Mobility Express controller</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.system_information">
+<code class="sig-name descname">system_information</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.system_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns system information about the controller (e.g. platform, version, etc.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The system information</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Unofficial Cisco Mobility Express Python API</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ciscomeapi">ciscomeapi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+      <li>Next: <a href="history.html" title="next chapter">History</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Greg Anuzelli.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
