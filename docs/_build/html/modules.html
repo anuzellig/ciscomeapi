@@ -90,6 +90,42 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.aps_data">
+<code class="sig-name descname">aps_data</code><span class="sig-paren">(</span><em class="sig-param">take: int = 1000</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.aps_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the detailed information about access points</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>take</strong> (<em>int</em>) – The maximum number of items to return</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The access point data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.client_connection_score">
+<code class="sig-name descname">client_connection_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.client_connection_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the table of client connection scores grouped by range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The connection score data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.client_connection_speed">
+<code class="sig-name descname">client_connection_speed</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.client_connection_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the table of client connection speeds grouped by range</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The connection speed data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="ciscomeapi.ciscomeapi.CiscoME.client_table">
 <code class="sig-name descname">client_table</code><span class="sig-paren">(</span><em class="sig-param">take: int = 1000</em>, <em class="sig-param">columns: int = 524287</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.client_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the table of client data</p>
