@@ -279,5 +279,6 @@ $RECYCLE.BIN/
 
 venv
 .vscode
+.env
 
 archive

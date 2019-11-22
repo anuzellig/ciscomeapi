@@ -96,6 +96,33 @@ class CiscoME:
         extra_params = {'take': take} if take else {}
         return _me_api._aps(self, GET, extra_params=extra_params)
 
+
+    def aps_data(self, take: int=1000) -> dict:
+        """Returns the detailed information about access points
+
+        :param take: The maximum number of items to return
+        :type take: int
+        :return: The access point data
+        """
+        extra_params = {'take': take} if take else {}
+        return _me_api._apdata(self, GET, extra_params=extra_params)
+
+    
+    def client_connection_score(self) -> dict:
+        """Returns the table of client connection scores grouped by range
+
+        :return: The connection score data
+        """
+        return _me_api._client_connection_score(self, GET)
+
+    
+    def client_connection_speed(self) -> dict:
+        """Returns the table of client connection speeds grouped by range
+
+        :return: The connection speed data
+        """
+        return _me_api._client_connection_speed(self, GET)
+
     ###############################################################################################
 
 

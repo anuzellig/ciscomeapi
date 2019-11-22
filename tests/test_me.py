@@ -1,4 +1,5 @@
 import os
+import sys
 
 import pytest
 
@@ -33,5 +34,39 @@ def test_aps():
     assert type(aps) is dict
     assert 'data' in aps
 
+
+def test_apdata():
+    aps = me.aps_data()
+    assert type(aps) is dict
+    assert 'data' in aps
+
+
+def test_client_connection_score():
+    scores = me.client_connection_score()
+    assert type(scores) is dict
+    assert 'clientconnectionscore' in scores
+
+
+def test_client_connection_speed():
+    speeds = me.client_connection_speed()
+    assert type(speeds) is dict
+    assert 'clientconnectionspeed' in speeds
+
+
 def teardown_module(module):
     me.close()
+
+
+if __name__ == '__main__':
+    # Also allow the tests to be run manually, outside of pytest
+    setup_module(sys.modules[__name__])
+
+    test_system_information()
+    test_clients_table()
+    test_aps()
+    test_apdata()
+    test_client_connection_score()
+    test_client_connection_speed()
+
+    teardown_module(sys.modules[__name__])
+

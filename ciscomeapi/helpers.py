@@ -8,6 +8,7 @@ Helper functions used by the other modules
 """
 
 import logging
+from json.decoder import JSONDecodeError
 
 import requests
 import urllib3
@@ -29,5 +30,8 @@ def request(me, method: str, endpoint: str, parameters: dict={}, extra_params={}
     
     if response.status_code == 404:
         raise NotFoundError('404 Page not found', session=me.session)
-
-    return response.json()
+    
+    try:
+        return response.json()
+    except JSONDecodeError:
+        return response.text
