@@ -14,8 +14,10 @@ info = me.system_information()
 for key, value in info.items():
     print(f'{key}: {value}')
 ``` 
- See the API documentation in the `docs` directory, and the `examples` directory for more code samples.
+ See the `examples` directory for more code samples.
  
+## Documentation
+[https://cisco-mobility-express-python-api.readthedocs.io](https://cisco-mobility-express-python-api.readthedocs.io/en/latest/)
  
 ## Implementation Notes
 `gen-enpoints.py` programmatically generates the base functions for each API call in `_me_api.py` by interrogating the Mobility Express Web UI and identifying and parsing potential calls from the front-end to the back-end. Then these functions are front-ended by simple manually written-methods in `ciscomeapi.py` to provide more context and niceties like docstrings. So far just a few of these methods have been created, more coming soon. 
