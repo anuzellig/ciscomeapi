@@ -56,6 +56,12 @@ def test_client_connection_speed():
     assert 'clientconnectionspeed' in speeds
 
 
+def test_blink_ap():
+    ap_mac = os.environ['AP_MAC']
+    response = me.blink_ap_led(ap_mac)
+    assert response['errorCode'] == 0
+
+
 def teardown_module(module):
     me.close()
 
@@ -64,6 +70,7 @@ if __name__ == '__main__':
     # Also allow the tests to be run manually, outside of pytest
     setup_module(sys.modules[__name__])
 
+    test_blink_ap()
     test_system_information()
     test_clients_table()
     test_aps()

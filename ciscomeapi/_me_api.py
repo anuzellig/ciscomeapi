@@ -1113,8 +1113,8 @@ def _spartan_apImageStatus(me, method: str, extra_params={}) -> dict:
     return request(me, method, "/screens/webui/resource/spartan/apImageStatus.json", extra_params=extra_params)
 
 
-def _spartan_apTool(me, method: str, extra_params={}) -> dict:
-    return request(me, method, "/screens/webui/resource/spartan/apTool.json", extra_params=extra_params)
+def _spartan_apTool(me, method: str, extra_params={}, json={}, data={}) -> dict:
+    return request(me, method, "/screens/webui/resource/spartan/apTool.json", extra_params=extra_params, json=json, data=data)
 
 
 def _startServer(me, method: str, extra_params={}) -> dict:

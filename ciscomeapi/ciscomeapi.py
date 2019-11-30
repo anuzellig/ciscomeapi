@@ -123,6 +123,18 @@ class CiscoME:
         """
         return _me_api._client_connection_speed(self, GET)
 
+    
+    def blink_ap_led(self, macAddress: str) -> dict:
+        """ Blink the  AP LED
+
+        :param macAddress: The MAC address of the AP of the form "aa:bb:cc:dd:ee:ff"
+        :type macAddress: str
+        :return: errorCode response
+        """
+        data = {'macAddress': macAddress, 'action': 6}
+        return _me_api._spartan_apTool(self, POST, json=data)
+
+
     ###############################################################################################
 
 

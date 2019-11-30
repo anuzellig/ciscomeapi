@@ -17,10 +17,15 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from .exceptions import AuthenticationError, NotFoundError
 
 
-def request(me, method: str, endpoint: str, parameters: dict={}, extra_params={}):
+def request(me, method: str, endpoint: str, parameters: dict={}, extra_params={}, json={}, data={}):
     url = me.base_url + endpoint
     all_params = {**parameters, **extra_params}
-    response = me.session.request(method, url, params=all_params)
+    if json:
+        response = me.session.request(method, url, params=all_params, json=json)
+    elif data:
+        response = me.session.request(method, url, params=all_params, data=data)
+    else:
+        response = me.session.request(method, url, params=all_params)
     
     if response.status_code == 401:
             # For some reason you need to connect twice
