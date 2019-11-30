@@ -208,6 +208,10 @@ def _client_table(me, method: str, _columns=None, extra_params={}) -> dict:
     return request(me, method, "/data/client-table.html", parameter1, extra_params=extra_params)
 
 
+def _clientDetails(me, method: str, extra_params={}) -> dict:
+    return request(me, method, "/screens/webui/resource/clientDetails.json", extra_params=extra_params)
+
+
 def _clients(me, method: str, extra_params={}) -> dict:
     return request(me, method, "/data/clients.html", extra_params=extra_params)
 
@@ -1107,6 +1111,10 @@ def _snmpdelete(me, method: str, extra_params={}) -> dict:
 
 def _spartan_apImageStatus(me, method: str, extra_params={}) -> dict:
     return request(me, method, "/screens/webui/resource/spartan/apImageStatus.json", extra_params=extra_params)
+
+
+def _spartan_apTool(me, method: str, extra_params={}) -> dict:
+    return request(me, method, "/screens/webui/resource/spartan/apTool.json", extra_params=extra_params)
 
 
 def _startServer(me, method: str, extra_params={}) -> dict:

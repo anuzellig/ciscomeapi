@@ -42,7 +42,7 @@ def find_endpoints(script_src: str):
     # Find endpoints of the form "/data/..."
     regex_map = {
         '/data/': re.compile(r'\/data\/(.*)(\.html)(\?.*")?'),
-        '/screens/webui/resource/': re.compile(r'"(.*)(\.json|\.jsp)')
+        '/screens/webui/resource/': re.compile(r'["|\'](.*)(\.json|\.jsp)'),
     }
     for url_base, regex in regex_map.items():
         for line in script_src.splitlines():
@@ -65,6 +65,9 @@ def find_endpoints(script_src: str):
                     parameters = [parameters.split('=')[0][1:]]
                 else:
                     parameters = []
+                # Skip invalid function names. Use better parsing to catch these in the future. 
+                if '..' in function_name:
+                    continue
                 endpoints[function_name] = Endpoint(url, parameters)
 
 

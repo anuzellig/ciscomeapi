@@ -278,6 +278,7 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/git,macos,python,pycharm,windows,visualstudiocode
 
 venv
+venv-win
 .vscode
 .env
 
