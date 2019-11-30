@@ -43,7 +43,7 @@ class CiscoME:
             raise CiscoMobilityExpressAPIException('host is a required parameter')
 
         protocol = 'https' if ssl else 'http'
-        self.base_url = f'{protocol}://{host}'
+        self.base_url = '{protocol}://{host}'.format(protocol=protocol, host=host)
         url = self.base_url + '/screens/dashboard.html'
         self.session = requests.Session()
         self.session.auth = (username, password)

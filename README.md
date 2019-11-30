@@ -19,6 +19,9 @@ for key, value in info.items():
 ## Documentation
 [https://cisco-mobility-express-python-api.readthedocs.io](https://cisco-mobility-express-python-api.readthedocs.io/en/latest/)
  
+## Requirements
+The library has been tested with Python 3.5 and later. Although some of the examples require Python 3.6 or later because of the use of f-strings. 
+
 ## Implementation Notes
 `gen-enpoints.py` programmatically generates the base functions for each API call in `_me_api.py` by interrogating the Mobility Express Web UI and identifying and parsing potential calls from the front-end to the back-end. Then these functions are front-ended by simple manually written-methods in `ciscomeapi.py` to provide more context and niceties like docstrings. So far just a few of these methods have been created, more coming soon. 
 

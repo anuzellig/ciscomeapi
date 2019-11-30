@@ -22,7 +22,7 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.5',
     ],
     description="An unofficial Cisco Mobility Express Python API.",
     install_requires=requirements,
@@ -36,6 +36,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/anuzellig/cisco-mobility-express-python-api',
-    version='0.2',
+    version='0.3',
     zip_safe=False,
 )
