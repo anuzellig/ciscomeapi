@@ -282,3 +282,5 @@ venv
 .env
 
 archive
+docs/_build/doctrees
+

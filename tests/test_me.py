@@ -2,6 +2,9 @@ import os
 import sys
 
 import pytest
+from dotenv import load_dotenv
+# Load environment variables from .env
+load_dotenv()
 
 from ciscomeapi import CiscoME, print_table
 
