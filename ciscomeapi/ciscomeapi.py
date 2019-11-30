@@ -134,6 +134,28 @@ class CiscoME:
         data = {'macAddress': macAddress, 'action': 6}
         return _me_api._spartan_apTool(self, POST, json=data)
 
+    
+    def toggle_ap_led(self, macAddress: str) -> dict:
+        """ Disable or enable the AP LED
+
+        :param macAddress: The MAC address of the AP of the form "aa:bb:cc:dd:ee:ff"
+        :type macAddress: str
+        :return: errorCode response
+        """
+        data = {'macAddress': macAddress, 'action': 5}
+        return _me_api._spartan_apTool(self, POST, json=data)
+
+    
+    def restart_ap(self, macAddress: str) -> dict:
+        """ Restart (reload) an AP
+
+        :param macAddress: The MAC address of the AP of the form "aa:bb:cc:dd:ee:ff"
+        :type macAddress: str
+        :return: errorCode response
+        """
+        data = {'macAddress': macAddress, 'action': 7}
+        return _me_api._spartan_apTool(self, POST, json=data)
+
 
     ###############################################################################################
 

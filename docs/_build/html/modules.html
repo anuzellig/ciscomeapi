@@ -225,6 +225,20 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.blink_ap_led">
+<code class="sig-name descname">blink_ap_led</code><span class="sig-paren">(</span><em class="sig-param">macAddress: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.blink_ap_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blink the  AP LED</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>macAddress</strong> (<em>str</em>) – The MAC address of the AP of the form “aa:bb:cc:dd:ee:ff”</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>errorCode response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="ciscomeapi.ciscomeapi.CiscoME.client_connection_score">
 <code class="sig-name descname">client_connection_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.client_connection_score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the table of client connection scores grouped by range</p>
@@ -270,12 +284,40 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.restart_ap">
+<code class="sig-name descname">restart_ap</code><span class="sig-paren">(</span><em class="sig-param">macAddress: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.restart_ap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restart (reload) an AP</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>macAddress</strong> (<em>str</em>) – The MAC address of the AP of the form “aa:bb:cc:dd:ee:ff”</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>errorCode response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="ciscomeapi.ciscomeapi.CiscoME.system_information">
 <code class="sig-name descname">system_information</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.system_information" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns system information about the controller (e.g. platform, version, etc.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The system information</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ciscomeapi.ciscomeapi.CiscoME.toggle_ap_led">
+<code class="sig-name descname">toggle_ap_led</code><span class="sig-paren">(</span><em class="sig-param">macAddress: str</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#ciscomeapi.ciscomeapi.CiscoME.toggle_ap_led" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disable or enable the AP LED</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>macAddress</strong> (<em>str</em>) – The MAC address of the AP of the form “aa:bb:cc:dd:ee:ff”</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>errorCode response</p>
 </dd>
 </dl>
 </dd></dl>

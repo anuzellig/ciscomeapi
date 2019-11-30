@@ -56,10 +56,24 @@ def test_client_connection_speed():
     assert 'clientconnectionspeed' in speeds
 
 
-def test_blink_ap():
+def test_blink_ap_led():
     ap_mac = os.environ['AP_MAC']
     response = me.blink_ap_led(ap_mac)
     assert response['errorCode'] == 0
+
+
+def test_toggle_ap_led():
+    ap_mac = os.environ['AP_MAC']
+    response = me.toggle_ap_led(ap_mac)
+    # For some reason the errorCode is 13 (usually?)
+    assert 'errorCode' in response
+
+
+def test_restart_ap():
+    ap_mac = os.environ['AP_MAC']
+    # Uncomment to test restarting the AP
+    # response = me.restart_ap(ap_mac)
+    # assert 'errorCode' in response
 
 
 def teardown_module(module):
@@ -70,13 +84,17 @@ if __name__ == '__main__':
     # Also allow the tests to be run manually, outside of pytest
     setup_module(sys.modules[__name__])
 
-    test_blink_ap()
+    test_blink_ap_led()
+    # Call it twice to set it back to the original state
+    test_toggle_ap_led()
+    test_toggle_ap_led()
     test_system_information()
     test_clients_table()
     test_aps()
     test_apdata()
     test_client_connection_score()
     test_client_connection_speed()
+    test_restart_ap()
 
     teardown_module(sys.modules[__name__])
 
