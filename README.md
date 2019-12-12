@@ -1,5 +1,13 @@
 # An Unofficial Cisco Mobility Express Python API
-This Python API allows you to interact with a Cisco Mobility Express controller to retrieve data, make configuration changes, etc. 
+This Python API allows you to interact with a Cisco Mobility Express controller to retrieve data, make configuration changes, etc. Features currently include:
+
+* Getting information about associated clients, such as a list of clients with details, connection scores, and connection speeds
+* Getting a list of and details about registered APs
+* Restarting APs
+* Blinking or toggling AP LEDs
+* System information, such as the Mobility Express version, platforms, etc. 
+
+
 
 ## Installation
 `pip install git+https://github.com/anuzellig/cisco-mobility-express-python-api.git`

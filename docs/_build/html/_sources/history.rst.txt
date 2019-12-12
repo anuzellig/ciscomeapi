@@ -5,7 +5,7 @@ History
 0.3 (November 30, 2019)
 -----------------------
 
-* Add blink_ap_led, toggle_ap_led
+* Add blink_ap_led, toggle_ap_led, restart_ap
 * Support for Python 3.5
 
 
