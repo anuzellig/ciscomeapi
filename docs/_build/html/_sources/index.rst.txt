@@ -1,6 +1,6 @@
 
-Welcome to the Documentation for the Unofficial Cisco Mobility Express Python API
-=================================================================================
+Welcome to the Documentation for the Unofficial Cisco Mobility Express Python Module
+====================================================================================
 
 .. include:: readme.rst
 
