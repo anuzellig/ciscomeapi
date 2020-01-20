@@ -21,7 +21,7 @@ import ciscomeapi
 
 # -- Project information -----------------------------------------------------
 
-project = 'Unofficial Cisco Mobility Express Python API'
+project = 'Unofficial Cisco Mobility Express Python Module'
 copyright = '2019, Greg Anuzelli'
 author = 'Greg Anuzelli'
 
