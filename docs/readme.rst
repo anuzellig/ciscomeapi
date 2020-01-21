@@ -2,7 +2,7 @@
 About
 =====
 
-This is an unofficial Cisco Mobility Express Python module which allows you to interact with a Cisco Mobility Express controller to retrieve data, make configuration changes, etc. Features currently include:
+This is a Python module which allows you to interact with a Cisco Mobility Express controller to retrieve data, make configuration changes, etc. Features currently include:
 
 - Getting information about associated clients, such as a list of clients with details, connection scores, and connection speeds
 - Getting a list of and details about registered APs
