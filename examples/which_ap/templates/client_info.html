@@ -1,0 +1,36 @@
+<html>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+    <meta name="format-detection" content="telephone=no"> 
+    <style>
+        @media (min-width: 992px) {
+            table {
+                width: 40%;
+            }
+        }
+        @media (max-width: 992px) {
+            table {
+                width: 100%;
+            }
+        }
+        th, td {
+            padding: 5px;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <head>
+        <title>Client Info</title>
+    </head>
+    <body>
+        <table>
+            {% for key, value in client_info.items() %}
+                <tr>
+                    <td>{{key}}</td>
+                    <td>{{value}}</td>
+                </tr
+            {% endfor %}
+        <table>
+    </body>
+</html>
