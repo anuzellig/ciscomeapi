@@ -4,7 +4,7 @@ bs4==0.0.1
 certifi==2019.9.11
 cffi==1.14.0
 chardet==3.0.4
-ciscomeapi==0.4
+ciscomeapi
 click==7.1.1
 Flask==1.1.1
 idna==2.8
