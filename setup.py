@@ -36,6 +36,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/anuzellig/cisco-mobility-express-python-api',
-    version='0.3',
+    version='0.4',
     zip_safe=False,
 )
