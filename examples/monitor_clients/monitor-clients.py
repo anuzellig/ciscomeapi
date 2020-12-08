@@ -28,12 +28,12 @@ password = os.environ['PASSWORD']
 def send_text(client):
     twilio = Client(account_sid, auth_token)
 
-    message = twilio.messages \
-                .create(
-                    body=f'New client detected: {client["HN"]} {client["devtype"]}',
-                    from_=from_number,
-                    to=to_number
-                    )
+    twilio.messages \
+        .create(
+            body=f'New client detected: {client["HN"]} {client["devtype"]}',
+            from_=from_number,
+            to=to_number
+            )
 
 
 if __name__ == '__main__':
@@ -52,5 +52,5 @@ if __name__ == '__main__':
                     print(f'New client detected: {client["HN"]}')
                     send_text(client)
         
-        first_run=False
+        first_run = False
         time.sleep(5)
