@@ -1,3 +1,4 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/anuzellig/ciscomeapi)
 # An Unofficial Cisco Mobility Express Python Module
 This Python module allows you to interact with a [Cisco Mobility Express](https://www.cisco.com/c/en/us/solutions/enterprise-networks/mobility-express/index.html) controller to retrieve data, make configuration changes, etc. Features currently include:
 
