@@ -22,7 +22,7 @@ Or on Windows:
 ## which_ap
 A simple Flask-based app that shows connectivity info about the client that the app is accessed from, e.g. which AP the client is connected to, client IP addresses, signal strength and quality, connection speed, frequency, etc. This can be very handy when troubleshooting connectivity issues as you can browse to the site from a mobile phone or other device to see these details, change location, and refresh the page to see updated info. 
 
-![Image](https://github.com/anuzellig/ciscomeapi/blob/master/examples/which_ap/screenshots/screenshot.png?raw=true)
+<img src="https://github.com/anuzellig/ciscomeapi/blob/master/examples/which_ap/screenshots/screenshot.png?raw=true" width="500" >
 
 The configuration parameters are read from environment variables by the script. On Linux/macOS you can launch the script from the shell like this:
 
