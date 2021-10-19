@@ -6,6 +6,6 @@ Installation
 
 .. code-block:: console
 
-    $ pip install git+https://github.com/anuzellig/cisco-mobility-express-python-api.git
+    $ pip install ciscomeapi
 
 
