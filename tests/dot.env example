@@ -1,0 +1,5 @@
+PYTHONPATH=.. 
+ME_HOST="me-controler-hotname" 
+USERNAME="cisco" 
+PASSWORD="Cisco123" 
+AP_MAC="aa:aa:aa:aa:aa:aa"

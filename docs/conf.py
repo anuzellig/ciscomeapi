@@ -26,7 +26,7 @@ copyright = '2019, Greg Anuzelli'
 author = 'Greg Anuzelli'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0.5'
 
 
 # -- General configuration ---------------------------------------------------

@@ -284,4 +284,4 @@ venv-win
 
 archive
 docs/_build/doctrees
-
+examples/reboot_aps/reboot-aps.sh

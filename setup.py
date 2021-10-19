@@ -19,7 +19,7 @@ setup(
     author="Greg Anuzelli",
     author_email="anuzellig@gmail.com",
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
@@ -41,7 +41,7 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/anuzellig/ciscomeapi',
-    download_url='https://github.com/anuzellig/ciscomeapi/archive/v_04.tar.gz',
-    version='0.4',
+    download_url='https://github.com/anuzellig/ciscomeapi/archive/v_05.tar.gz',
+    version='0.5',
     zip_safe=False,
 )

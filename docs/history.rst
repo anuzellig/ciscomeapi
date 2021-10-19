@@ -2,6 +2,13 @@
 History
 =======
 
+0.5 (October 19, 2021) 
+-----------------------
+
+* Add the "reboot-aps" example
+* Update dependencies to resolve Dependabot alerts
+
+
 0.4 (December 8, 2020) 
 -----------------------
 

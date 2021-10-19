@@ -61,6 +61,10 @@ Or on Windows:
 	cmd /C "ME_HOST =<Mobility Express hostname or IP> && set USERNAME=<Mobility Express username> && set PASSWORD=<Mobility Express password> python monitor-which-ap.py"
 
 And then from your wireless client browse to the IP address of the host that is running the script on port 5000. I.e. `http://<ip>:5000`
+
+### reboot_aps
+Reboots all the APs sequentially, waiting for each one to come back up before moving on to the next. The hostname, username, and password are read from environment variables by the script (see the `which_ap` example above).
+
  
 ## Documentation
 [https://cisco-mobility-express-python-api.readthedocs.io](https://cisco-mobility-express-python-api.readthedocs.io/en/latest/)

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Usage &mdash; Unofficial Cisco Mobility Express Python Module 0.1 documentation</title>
+  <title>Usage &mdash; Unofficial Cisco Mobility Express Python Module 0.5 documentation</title>
   
 
   
@@ -154,11 +154,11 @@
   <div class="section" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
 <p>To retrieve system information about the controller (platform, version, etc.):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ciscomeapi</span> <span class="k">import</span> <span class="n">CiscoME</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ciscomeapi</span> <span class="kn">import</span> <span class="n">CiscoME</span>
 <span class="n">me</span> <span class="o">=</span> <span class="n">CiscoME</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;controller IP&#39;</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
 <span class="n">info</span> <span class="o">=</span> <span class="n">me</span><span class="o">.</span><span class="n">system_information</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{key}</span><span class="s1">: </span><span class="si">{value}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>See the examples directory for more code samples.</p>
