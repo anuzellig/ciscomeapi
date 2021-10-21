@@ -1,5 +1,5 @@
 -r requirements.txt
-Babel==2.7.0
+Babel==2.9.1
 Sphinx==2.2.1
 alabaster==0.7.12
 astroid==2.3.3
